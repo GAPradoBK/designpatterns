@@ -1,0 +1,20 @@
+In computer programming, the specification pattern is a particular software design pattern,
+whereby business rules can be recombined by chaining the business rules together using boolean logic.
+The pattern is frequently used in the context of domain-driven design.
+
+A specification pattern outlines a business rule that is combinable with other business rules. In this pattern,
+a unit of business logic inherits its functionality from the abstract aggregate Composite Specification class.
+The Composite Specification class has one function called IsSatisfiedBy that returns a boolean value. After instantiation,
+the specification is "chained" with other specifications, making new specifications easily maintainable,
+yet highly customizable business logic. Furthermore, upon instantiation the business logic may, through method invocation
+or inversion of control, have its state altered in order to become a delegate of other classes such as a persistence repository.
+
+
+-------------------------
+
+
+Selection: You need to select a subset of objects based on some criteria, and to refresh the selection at various times
+
+Validation: You need to check that only suitable objects are used for a certain purpose
+
+Construction-to-order: You need to describe what an object might do, without explaining the details of how the object does it, but in such a way that a candidate might be built to fulfill the requirement.
